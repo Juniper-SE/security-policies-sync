@@ -38,7 +38,7 @@ if __name__ == '__main__':
         # print(etree.tostring(node0_fpc0, encoding='unicode'))
         # TODO: SCP to log server
 
-        jdev.display_xml_rpc("request sec")
+        jdev.display_xml_rpc("request security policies resync")
 
         # Sends a syslog with a custom message
         # For syslog priority levels, see: https://manuals.plus/m/e7f98432136a1bb0ce2b378dc99d4c20765f61b020863ffe97021947651df6a9.pdf
