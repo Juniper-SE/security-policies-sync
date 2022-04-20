@@ -1,0 +1,24 @@
+system {
+    scripts {
+        language python3;
+    }
+}
+event-options {
+    generate-event {
+        policy_sync time-interval 60;
+    }
+    policy test {
+        events policy_sync;
+        then {
+            event-script policy_sync.py;
+        }
+    }
+    event-script {
+        traceoptions {
+            flag output;
+        }
+        file policy_sync.py {
+            python-script-user lab;
+        }
+    }
+}
