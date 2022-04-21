@@ -16,4 +16,4 @@ python-script-user: "By default, Junos OS executes Python event scripts with the
 # To use/install:
 1. Load or set SRX configs using the JSON formatted file (srx-config-json) or the set commands (srx-config-set)
     - make sure you set the time-interval to what you actually need and not 60 seconds!!
-2. Copy the python file over to the devices
+2. Copy the python file over to the devices into `/var/db/scripts/event`
