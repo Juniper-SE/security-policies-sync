@@ -12,3 +12,8 @@ Special thanks to Lee Gillespie for providing a base for the event script Junos 
 time-interval: time in seconds to run the script/commands
 traceoptions: used to debug any python runtime issues
 python-script-user: "By default, Junos OS executes Python event scripts with the access privileges of the generic, unprivileged user and group nobody. Starting in Junos OS Release 16.1R3, you can specify the user under whose access privileges the Python script will execute" https://www.juniper.net/documentation/us/en/software/junos/automation-scripting/topics/concept/automation-enabling-an-event-script.html
+
+# To use/install:
+1. Load or set SRX configs using the JSON formatted file (srx-config-json) or the set commands (srx-config-set)
+    - make sure you set the time-interval to what you actually need and not 60 seconds!!
+2. Copy the python file over to the devices
