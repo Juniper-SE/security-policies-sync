@@ -1,7 +1,6 @@
 from base64 import encode
 from jnpr.junos import Device
 from lxml import etree
-import jcs
 import re
 import logging
 syslog = logging.getLogger("syslog")
@@ -11,7 +10,11 @@ syslog = logging.getLogger("syslog")
 # INFO only print INFO and above
 # ^ same for warning and ERROR is only errors
 log_server = ""
-logging.basicConfig(filename='/var/db/scripts/event/policy_sync.log', level=logging.INFO)
+logging.basicConfig(
+    filename='/var/db/scripts/event/policy_sync.log',
+    level=logging.INFO,
+    format='%(asctime)s %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S')
 
 if __name__ == '__main__':
     # Leave empty if running directly on device;
