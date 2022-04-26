@@ -1,11 +1,5 @@
-set system scripts language python3
 set event-options generate-event policy_sync time-interval 60
 set event-options policy check_security_policies events policy_sync
 set event-options policy check_security_policies then event-script policy_sync.py
-set event-options policy check_security_policies then execute-commands commands "show system uptime"
-set event-options policy check_security_policies then output-filename policy_sync.txt
-set event-options policy check_security_policies then execute-commands destination LOCAL
-set event-options policy check_security_policies then execute-commands output-format text
 set event-options event-script traceoptions flag output
 set event-options event-script file policy_sync.py python-script-user lab
-set event-options destinations LOCAL archive-sites /var/log

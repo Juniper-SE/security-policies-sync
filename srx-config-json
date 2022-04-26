@@ -14,9 +14,6 @@ event-options {
         }
     }
     event-script {
-        traceoptions {
-            flag output;
-        }
         file policy_sync.py {
             python-script-user lab;
         }

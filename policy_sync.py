@@ -9,9 +9,10 @@ syslog = logging.getLogger("syslog")
 # Debug prints ALL logs to file
 # INFO only print INFO and above
 # ^ same for warning and ERROR is only errors
+log_filename = '/var/db/scripts/event/policy_sync.log'
 log_server = ""
 logging.basicConfig(
-    filename='/var/db/scripts/event/policy_sync.log',
+    filename=log_filename,
     level=logging.INFO,
     format='%(asctime)s %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S')
