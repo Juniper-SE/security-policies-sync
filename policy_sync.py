@@ -60,7 +60,6 @@ if __name__ == '__main__':
         sec_pols_resync = jdev.cli("request security policies resync")      # currently the rpc gives an "unrecognized command" error
         logging.info("INFO: resync output: " + sec_pols_resync)
 
-        # TODO: SCP to log server
         # Sends a syslog with a custom message
         # For syslog priority levels, see: https://manuals.plus/m/e7f98432136a1bb0ce2b378dc99d4c20765f61b020863ffe97021947651df6a9.pdf
         syslog.warning("Security policies are out of sync, resync was attempted.")
